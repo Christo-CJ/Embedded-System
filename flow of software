@@ -1,1 +1,10 @@
 In OS based during the running of program for instance ./a.out
+The HDD will load it into RAM ,then from RAM processor would execute the code.Only processor can execute the code no others can perform this.
+
+In case of OS less the execution starts directly from flash memory.
+Here RAM is issued to store runtime data which button is pressed ,it is tempororily stored in RAM. processor get the code only from flash.
+
+Role of Flsash memory : Used to stor embedded code or embedded software.
+RAM                   : used to store run tie data.
+processor             : used to execute embedded software.
+
