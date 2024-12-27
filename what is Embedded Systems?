@@ -3,3 +3,21 @@ Consider an Example,
 Your Washing Machine is a day to day life Embedded system. You can notice how they work.wonder how they work?
 when we press buttons on the hardware, the just push of button execute different tasks written for each button option and they work accordingly as they are specified or told to do.
 we see the rinse,extra water ,soak,wash,waterlevel,drain all these are the functionalities provided we just pushes acoording to our need and wait for the task to be over.
+
+This is a combination of Hardware and software designed for performing specific tasks.
+
+The systems will not work on their own the code or the firmware should be written and out in microcontrollers in order to perform the tasks.
+Embedded C language is widely used language.It is a portable language.
+light weight language that the size of the executable file will e lesser than when compared with c++.
+
+There are two types of embedded systems
+    * OS based
+    * OS less
+
+OS based simply has os over hardware over that application layer will come.
+more number of resources can be managed
+eg:Smart watch,smart phone,drones,...
+
+OS less the application layer come over the hardware.
+less numer of resources.
+eg:digital watch,washing machine,digital thermometer....
