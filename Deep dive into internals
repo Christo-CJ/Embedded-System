@@ -1,0 +1,38 @@
+In assembly language,every instruction has its unique number called "opcode"  operational code.
+opcodes are hard coded.
+mnemonics:- ADD,SUB,MUL,DIV,MOV,XCH
+
+ASM of one controller may not work for other because opcodes are hard coded cannot be changed the makers decide certain values for different instructions.
+Hex values that hex files only has hex values no instruction or words will be written there
+
+what happens?
+We provide with instruction such as ADD , SUB,etc..
+These instruction are further converted to assembly the opcodes.
+Then when we flash or dumb the code into flash it is stored in a table each instruction on order basis.
+from that loaded order only the instructions will be fetched like starting from index 0
+after CPU fetches the instruction CPU decode and execute the instruction.
+Execution in help with logic gates.
+Arithmetic logic unit provide with logic gates.Different instruction has differect circuits in ALU.
+Inside ALU there are combination of gates that executes out instruction ALU is inside CPU where which executing our instruction.
+OPcode value 0 is for no operation.
+processor cannot execute 2 instruction at a time.
+Earlier ROM was used now flash mem is used .if it is a ROM only one time you can store your program.ROM is called One time programmable chip OTP chip
+Flash memory is reprogrammable memory.can erase a program and dump another.
+
+In ASM only two method to store data
+ * Register
+ * Memory Address
+
+syntax of MOV:- MOV destination reg,source reg
+
+swaping data:- R5=10 R0=5
+MOV R1,R0  //5 moved to R1
+MOV R0,R5  //10 moved to R0
+MOV R5,R1  //5 moved to R5
+
+XCH:- is used to exchange data
+XCH R0,R5   //XCH instruction swapped data
+
+Inside CPU XCH logic gates works.MOV and XCH comparing more XCH has more works.Inside XCH some extra registers is there inside swaping,Inside processor XCH is complex count of logic gates are more.MOV logic gates count is less for processor XCH is complex,MOV is simple.
+logic gate increased die size also increases processor size is increased so product size increased.
+Instruction taking more clock cycles it consumes more circuit.coplex system geat is discipated.
