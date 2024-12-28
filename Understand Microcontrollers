@@ -1,0 +1,46 @@
+Undersatnd processor outside microcontroller will be faster when compared to outside.
+software is used in microcontroller varies from product to product
+
+there are mainly 2 categories of microcontrollers
+   * Dual inline package 
+   * Quad flat package
+
+Advance Microcontrollers
+------------------------
+* power consumption is low.
+* rate is low
+* Battery controlled microcontrollers is best.
+
+Inside Microcontrollers
+------------------------
+* processor
+* memory RAM and Flash memory 
+* PLL 
+* UART
+* I2C
+* SPI
+* CAN
+* GPIO PORTS
+* Timer Counters
+
+if processor doesnot come with internal memory, External RAM and external RAM is mandatory for this processor.
+microcontroller comes with everything inbuilt.
+Microcontroller also called small computer on chip Also known as System On Chip.(SOC)
+since microcontrollers power consumption is low heat consumption also low.
+
+
+
+DIFFERENCE BETWEEN MICROCONTROLLER AND MICROPROCESSOR
+------------------------------------------------------
+
+MICROPROCESSOR                                            MICROCONTROLLERs
+--------------                                            ----------------
+* MP is called as chip on computer                        MC is called as System On Chip
+* MP doesnot comes with inbuilt memory and                MC comes with inbuilt processor memory and 
+  peripherals like uart,timer,adc,gpio                    peripherals like uard,timer,adc,gpio 
+* MP is designed for computer and laptops                 MC is designed for embedded systems
+* Power consumption is more on MP based products          power consumption is less
+* Heat discipation is more                                heat discipation is low
+* products are costlier                                   products are cheaper
+* MP based product are bigger in size                     MC based products are smaller in size
+* 8085,8086,i3,i5,i7                                      8051 famile,AVR family,PIC,ARM
