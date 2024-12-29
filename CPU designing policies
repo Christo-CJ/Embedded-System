@@ -5,3 +5,30 @@ Based on instructions set
 Based on memory organising
  * Harvard
  * von Neumann
+
+
+  CISC                                                   RISC
+--------                                               --------
+* complex instruction set computing                   * Reduced instruction set computing
+* It consist of complex and simple instructions       * it consists pn;y simple instructions
+* agenda: To reduce instructions per program          * agenda:to reduce clock pluses instruction
+* multi clock cycle instructions                      * single clock cycle instructio
+* logic gate are more inside processor                * logic gates are less inside processor
+* power consumption is more and heat discipation high * power consumption is less and heat discipation is also low
+* Die size is larger compared to RISC chip            * die size is smaller compared to CISC
+* compiler designing is simple                        * compiler designing is difficult
+*eg: all intel processor,i3,i5... 8086,8051 CPU..     * ARM,AVR,PIC...
+
+
+
+HARVARD                                                       VON-NEUMANN ARCHITECTURES
+---------                                                     ----------------------------
+* Harward  CPU have seperate program memory and data memory    * single memory that can be used as data memory and program memory.
+* eg:8051 CPU                                                  * ARM7
+   AVR CPU                                                       All intel processor 
+   PIC CPU
+* if address bus is 16 bit then max memory is address bus      * if address bus is 32 bit then max memory is address bus 
+  2^16=64B                                                        2^32=4GB
+
+if to read and write anything both of them use bus to point towards the memory location.
+
