@@ -20,5 +20,10 @@ ARM8
 ARM9
 ARM10   9 10 and 11 OS based also prefered for OS based embedded system
 ARM11
-
 ARM cortex
+
+
+ARM coretx
+->series A(Application)-mobilephone,tablet,smartwatches
+->series R(Real time)  -Airbag system,hospitals,etc..
+->series M(Microcontroller)-lifts,non realtime,ATM machines.
