@@ -32,3 +32,23 @@ SFR are present outside processor.They are at RAM
 ARM
 * old version ARM7 arch:armv3
 * new version ARM7 arch:armv4T
+
+That the architecture is different that whether it supports the different instruction sets instruction sets are different in different architecture.
+
+* ARM instruction set is default instruction set
+  All ARM procssors can understand ARM instructions
+* THUMB instructions is set is optimal
+  every instrcution cannot be understandable only few can understand thumb instructions.
+
+ARMV4T T stands for Thumb
+
+suppose we write using thumb old version cannot understand whether it is thumb or not.
+
+ARM has embedded In Circuit Emulator
+is used for debug the software of embedded system
+
+in normal controller we cannot execute step by step
+ICE will allow embedded software code step by step
+In PC we execute one line execution Every line we can monitor it on the hardware.
+
+User mode is the only non previleged mode all other modes are privileged modes
