@@ -1,1 +1,28 @@
-
+* low power and high performance processor
+* 32 bit RISC processor
+* It supports Von-Neumann Architecture
+* Three stage pipeline architecture
+* 32 bit addressing
+* 37 core registers.size of register is 32 bits
+* It supports different sets of instructions
+   -> Thumb instructions
+   -> ARM instructions(default)
+* Small die size
+* Embedded ICE and On chip Emulator
+* fixed size instruction and single clock cycled instruction
+* ARM7 can handle 7 exceptions
+   -> reset
+   -> data abort
+   -> FIQ
+   -> IRQ
+   -> prefetch abort
+   -> undefined
+   -> software
+* ARM processor works in 7 different modes
+   -> User mode
+   -> Supervisor mode
+   -> FIQ mode
+   -> IRQ mode
+   -> Undefined mode
+   -> Abort mode
+   -> system mode
