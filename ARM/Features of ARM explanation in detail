@@ -1,0 +1,34 @@
+the registers inside the ARM are all 32 bit registers.
+ARM works on a 3.3 v and working frequency is 60 MHz
+If processor is 32 bit ALU processing capacity is 32 bit
+
+8 bit processor can do 16 bit operation but it will take 2 cycles 
+8 bit can do 32 bit but takes 4 cycle
+
+if processor is 32 bit means ALU processing capacity is 32 bit
+if processor is 32 bit size of register is also 32 bit
+
+
+memory split ration since using Von-Neumann arch is 3:1
+3GB:1GB
+Data memory:program memory
+
+program memory:what programs written all stored there
+Data memory   :Runtime data stored in data memory along with it special function register(SFR) all are available in the RAM
+
+
+what/why is Pipe line architecture?
+It boost execution speed of processor while other instructions are being fetched and decoded.
+
+37 different register
+Types of Registers:
+ * General purpose register
+ * Special function Registers(SFR)
+
+SFR are used for hardware communication
+GPR storing Runtime data and address
+SFR are present outside processor.They are at RAM
+
+ARM
+* old version ARM7 arch:armv3
+* new version ARM7 arch:armv4T
