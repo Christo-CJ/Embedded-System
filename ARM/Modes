@@ -1,0 +1,53 @@
+Modes will automatically change when interupted
+we donot want to change the mode manually by writing program it will automatically change
+
+Interupt Service Routine : When processor Interupted It would run ISR.Processor the execution of main function wil execute ISR.
+ISR is a function that is user defined
+
+There modes are given to data security
+
+
+modes:
+* User mode:
+  normal program execution mode
+  it is non priviledged mode
+
+* Supervisor mode:
+  It is default mode of ARM processor after reset
+     pressing reset button automatically move to suupervisor
+
+  In embedded system : after reset->startup code-> main funtion   the startup code do some functioning and then give control to main function
+
+  IN ARM processor   : after reset->supervisor mode-> user mode
+
+* Faster Interupt Request(FIQ)  Interupt Request mode(IRQ)
+  FIQ-> high priority
+  IRQ->low priority
+
+  due to FIQ ARM becomes popular
+  lets take a scenario  in case of airbag depletion that the crash detection system would call the interupt that the interupt is called and then the airbag is deployed
+  similarly in IRQ mode USR mode will be changed to IRQ mode after execution of IRQ mode the IRQ mode will switch back to FIQ mode.
+
+* Abort mode
+  if the processor fetches data from reserve memory space then the procesor enter to abort mode
+  like segmentation fault when the processor fetches data from reserved  interupt gets generated and goea to abort mode.
+
+* Undefined mode 
+  If any undefined instruction is fetched,then processor enetrs to undefined mode
+
+  V4T can understand THUMB
+  when given to v3 that thumb instructions are undefined.
+  if any undefined processor not understand ,then processor goas to undefined mode
+
+* system mode
+  it is priviledged mode for USER .
+
+  USR mode and system mode considerd as same mode.we can execute normal program in priviledged mode for that function should enter into system mode
+
+suppose CPSR reg usage is unknown it would stop program execution then CPSR should be changed for that to continue again.
+
+USR/sys mode will have common stack both have same stack
+every mode has its own stack
+any stack data in USR stack willnot develop with FIQ stack
+that is ccalled data security
+Every mode has own stack and data will not overlap Hence data security.
