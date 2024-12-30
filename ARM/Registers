@@ -1,0 +1,6 @@
+2 modes privileged and non privileged
+
+in privileged mode can write and read from Current Program Status Register
+in non privileged mode processor cannot write into CPSR reg
+
+only read can be possible no write operations are possible
