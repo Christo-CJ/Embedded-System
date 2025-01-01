@@ -34,7 +34,7 @@ R11
 R12     ---
 R13 (stack pointer)
 R14 (link register)
-R15 (Program counter)
+R15 (Program counter)    
 
 
 STACK POINTER
