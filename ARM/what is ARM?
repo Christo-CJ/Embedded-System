@@ -2,7 +2,7 @@ It is an advanced RISC machine.
 ARM is the processor designed by "ARM limited company"
 if ARM processor not used inside processor it is not a ARM controller.
 If ARM processor embedded inside a chip along with memory and device controller then that chip is called ARM controller
-ARM inteluctual property and sell to manufacturers.  
+ARM inteluctual property and sell to manufacturers.    
 
 ARM processor + memory + device controller = ARM controller
 
