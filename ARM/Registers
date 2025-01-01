@@ -58,3 +58,37 @@ two operations are possible on any stack
 
 size of stackpointer is 4 bytes thats why 4 bytes increment and decrement.
 similarly if it was 8 byte then it would be increment and decrement by 8.
+
+
+Types of stacks
+---------------
+. upgrading stack
+. downgrading stack
+
+if we take downgrading stack,then when we pus operation sp will decrease and in pop operation it in increment
+
+"ARM7 SP is downgrading in nature"
+
+
+? In which case processor will do stack pointer
+ans> 1. function call
+     2. Interupts
+
+
+LINK REGISTER R14
+------------------
+This register is used to store the function return address when interupt is triggered.
+Register opertaion is faster rather than storing in stack RAM.
+processor storing address to stack take time due to its outside.
+But register is insside processor so faster
+register operation is faster compared to stack RAM.
+
+When interupt triggered LR will be storing the next address then after that interupt call the LR wll be having the continuation address.
+
+When interupt generated next address stored in LR interupt execution time is lower compared to processor stack way.
+
+Real time eg:
+car air bag deploy processor stack method take time in case of performing push and pop operation and processor ISR action take time
+but LR method is quick
+ARM processor are popular due to this other processor uses stack method.
+This is one main reason make ARM faster .switching from ISR is faster.
