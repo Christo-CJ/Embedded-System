@@ -4,3 +4,57 @@ in privileged mode can write and read from Current Program Status Register
 in non privileged mode processor cannot write into CPSR reg
 
 only read can be possible no write operations are possible
+
+
+ARM7 Register set
+-----------------
+General purpose register
+
+* Total 37 registers are available
+   each register is 4 bytes
+* in that total 16 registers are available in USR mode
+* remaining 21 registers are available in other modes 
+  The 21 registers are called as Banked registers
+
+List of USR mode registers
+--------------------------
+
+R0       ---
+R1
+R2
+R3
+R4
+R5              General purpose registers 
+R6
+R7
+R8
+R9
+R10
+R11
+R12     ---
+R13 (stack pointer)
+R14 (link register)
+R15 (Program counter)
+
+
+STACK POINTER
+-------------
+stack pointer always point to stack .stack is a part of RAM.
+
+two operations are possible on any stack
+.push  -> inserting data into stack
+.pop   -> Getting data from stack
+
+* In push operation data is never stored where Stack pointer(SP) is pointing.
+  when push operation internally stack pointer increments for eg if 100 stackpointing address push then sp points towards 104.otherwise data will be overwritten.if agin push 1t 104 sp will be pointing at 108 and then data is being inserted.
+
+* Pop is getting data
+  if sp pointing at 108 and do pop first processor will read the data from sp is pointing 
+  Then decrement pointer by 4
+  once again doing at 104 sp first processor will get data and then decrements by 4.
+
+1.pop operation processor will get the data from sp is pointed.
+2.Then decrements pointer by processor for 4 locations
+
+size of stackpointer is 4 bytes thats why 4 bytes increment and decrement.
+similarly if it was 8 byte then it would be increment and decrement by 8.
