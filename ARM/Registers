@@ -92,3 +92,27 @@ car air bag deploy processor stack method take time in case of performing push a
 but LR method is quick
 ARM processor are popular due to this other processor uses stack method.
 This is one main reason make ARM faster .switching from ISR is faster.
+
+
+PROGRAM COUNTER 
+---------------
+PC is always points to the read instrcution address to be executed
+after reset PC value become zero in all controllers and processors
+after reset stack pointer maynot be zero.
+PC always face tp program memory
+in Microcontroller PC always point to program memory(flash memory)
+program memory where program is always stored.
+
+when dump a hex file to microcontroller startup code is first stored at 0 then followed by main.
+
+
+.Instruction register will store the value the decode 
+.That decoding processor will understand what task to perform then pass to ALU where execution starts
+.after decoding and before execution program counter will point to next instruction.processor will not stop after decoding processor will check where PC pointing and starts fetching
+.after decoding ALU understand what to do after decoding PC incremented
+.like afer 12 then 16 There is no program fetching processor will not know that there is nothing in it.It is a 'no operation'.In processor '0' is reserved for 'no operation'
+again it wil increment PC and check the instruction it will keep on incrementing
+.program abc.c then program is converted to .hex file .that hex file values are dumbed into flash memory values will be there in flash memory that each value symbolizes each instructions
+.processor will check for an instruction till the execution resatrts from 0.
+
+
