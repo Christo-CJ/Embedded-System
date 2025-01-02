@@ -116,3 +116,71 @@ again it wil increment PC and check the instruction it will keep on incrementing
 .processor will check for an instruction till the execution resatrts from 0.
 
 
+Current program status register(CPSR)
+------------------------------------
+.this register is common to all the modes
+.This regsiter will hold the complete info of the current mode like 
+  flag status,mode info,state info,interupt etc..
+
+if cpsr currently in USR mode and an interupt had occured then the cpsr will show interupt accordingly if irq or fiq
+
+
+     flags           status                extension            control
+<----------------><----------------><---------------------><-------------->
+31  30  29  28                                             7  6  5  4     0
+N   Z   C   V                                              I  F  T    mode 
+{conditional                                               ^  ^        ^  processor mode  
+  flags}                                              interupt mode
+                                                                  T-THUMB 
+V- overflow flag
+C-carry flag
+Z-zero flag
+N-negative flag
+
+$ first modes:- 5 bits which mode program is executing processor 0-4
+
+
+Abort mode      ABT      10111         0x17
+Fast interupt   FIQ      10001         0x11
+IRQ             IRQ      10010         0x12
+supervisor      SV       10011         0x13
+system          SYS      11111         0x1F
+undefined       UND      11011         0x1B
+User ode        USR      10000         0x10
+
+
+In RAM only few address are alloted for each stack
+processor will always check CPSR in which mode it is executing the code
+As like the each stack is choosen on CPSR
+previous mode informatin are stored to SPSR register
+so it would return and processor will understand in which mode it should execute.
+
+processor will use SPSR register to store info of previous mode(context of previous mode)
+
+all 32 bit is stored from CPSR to SPSR(Saved program status register)
+
+$ T bit:- 5th bit
+1-processor is in the Thumb state
+0-processor is in the ARM state
+
+in ARM processor after reset ARM state and supervisor mode(default mode after reset)startup code executed
+  
+$ 6th bit FIQ
+   1-FIQ masked/disabled
+   0-enabled
+
+& 7th bit IRQ
+   1-IRQ disable
+   0-enabled
+
+& Overflow flag(v)28bit
+   check any number with 0 it became 1
+
+& carryflag(c) 31bit
+   when there is carry from MSG bit
+
+& Negative flag(N)
+   in arithmetic operation the 31st bit of the result become 1,then negative flag will set
+
+& Zero flag(z)
+   when the result of arithmetic operation is zero then zero flag become 1
