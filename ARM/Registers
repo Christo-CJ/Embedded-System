@@ -7,7 +7,7 @@ only read can be possible no write operations are possible
 
 
 ARM7 Register set     
------------------
+-----------------   
 General purpose register
 
 * Total 37 registers are available
