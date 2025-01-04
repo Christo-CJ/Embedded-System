@@ -1,0 +1,19 @@
+USR/sys mode   :R0-R12,R13_usr,R14_usr,R15(pc)  -16
+FIQ mode       :R8,R9,R10,R11,R12<R13_fiq,R14_fiq,spsr_fiq  -24
+IRQ mode       :R13_irq(sp),R14_irq(LR),SPSR_irq  -27
+Abort mode     :R13_abt,R14_abt,spsr_abt    -30
+Undefined mode :R13_und,R14_und,spsr_und    -33
+supervisor mode:R13_svc,R14_svc,spsr_svc    -36
+CPSR                                        -37
+
+FIQ mode processor gets more number of registers
+Any local variable declared in fiq it will not go to stack it will be having special register
+FIQ executes faster
+In user mode there is no SPSR register
+IN every processor stack pointer (SP) and program counter(PC)
+
+Why no SPSR in usr/sys mode?
+To restyoring previous content SPSR used
+depends on the interupted its in main usr mode thats why no spsr required
+But if interupted and carrying from any other mode such as IRQ,FIQ other modes have the spsr to have the context of the mode
+USR mode from it is jumping So since it s in USR/sys mode no need to save spsr.
