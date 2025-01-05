@@ -1,0 +1,32 @@
+Pipeline Architecture
+---------------------
+ICE In Circuit Emulator (used fr hardware debug)
+IDU Instruction Decoding Unit
+ALU Arithmetic logic unit
+
+Role of CORE
+.Execute Instructions sequentially
+.Fetching
+.Decoding
+
+One core execute one instruction at a time
+If two core two instructions can be executed.
+
+To execute instructions processor takes 3 clock cycles
+
+3 stages: Fetch,Decode,Execute(all process happens in core only)
+
+Instructions are parallely done
+If one Instruction is decoding one another instruction will be fetched.
+
+like the clk cycle it will be fetched decoded and executed
+
+
+.Faster execution
+without pipeline it would take clk cycles to process each instructions but in pipeline arch core is executing instruction processor will be doing other activities parallely.
+
+when decoder comes '0' it will understand no instruction but it will not stop.It will go till last memory check whether there is instruction in any location.
+here with pipeline only take 8 clk cycle
+but without pipeline it take 21 cycles
+
+In one clk cycle itself that the execution is done but processor will be doing parallely other instructions fetching and decoding.
