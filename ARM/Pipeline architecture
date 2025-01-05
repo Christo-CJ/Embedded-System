@@ -66,3 +66,32 @@ What if interupt triggered in execution stage?
   paralely processor would fetch and decode other instructions
 .After all IRQ instructions executed then again .SUB is fetched and likewise pipeline continues
 .That when interupt is triggered there would the program counter would be decremented by 4 pointing towards previous instruction as in tyhe ftech then the instructions from where it is stoped.
+
+
+IRQ
+{ //IRQ start
+//example
+IRQ1()
+IRQ2()
+IRQ3()
+}  //IRQ end
+
+                
+                  fetch                    decode                   execute
+cycle1             ADD                        x                        x
+cycle2             SUB                       ADD                       x
+cycle3             CMP                       SUB                      ADD
+cycle4             LDR                       CMP                      SUB
+                   -----------IRQ-------------come------------- 
+cycle5             IRQ1                       x                        x
+cycle6             IRQ2                      IRQ1                      x
+cycle7             IRQ3                      IRQ2                     IRQ1
+                   -----------IRQ execution done------------------
+cycle8             SUB                       ADD                       x
+cycle9             CMP                       SUB                      ADD
+cycle10            LDR                       CMP                      SUB
+cycle11            MUL                       LDR                      CMP
+cycle12            DEV                       MUL                      LDR
+cycle13            MOV                       DEV                      MUL
+cycle14             x                        MOV                      DEV
+cycle15             x                         x                       MOV
