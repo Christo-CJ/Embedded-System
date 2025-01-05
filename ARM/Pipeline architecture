@@ -21,6 +21,30 @@ If one Instruction is decoding one another instruction will be fetched.
 
 like the clk cycle it will be fetched decoded and executed
 
+flash memory
+instruction  |  addr
+-------------|-----
+MOV          |  24
+DIV          |  20
+MUL          |  16
+LDR          |  12
+CMP          |  8
+SUB          |  4
+ADD          |  0
+-------------|-------
+
+                
+                  fetch                    decode                   execute
+cycle1             ADD                        x                        x
+cycle2             SUB                       ADD                       x
+cycle3             CMP                       SUB                      ADD
+cycle4             LDR                       CMP                      SUB
+cycle5             MUL                       LDR                      CMP
+cycle6             DEV                       MUL                      LDR
+cycle7             MOV                       DEV                      MUL
+cycle8              x                        MOV                      DEV
+cycle9              x                         x                       MOV
+
 
 .Faster execution
 without pipeline it would take clk cycles to process each instructions but in pipeline arch core is executing instruction processor will be doing other activities parallely.
@@ -30,3 +54,15 @@ here with pipeline only take 8 clk cycle
 but without pipeline it take 21 cycles
 
 In one clk cycle itself that the execution is done but processor will be doing parallely other instructions fetching and decoding.
+
+
+What if interupt triggered in execution stage?
+
+.That in case if the ADD instruction then there is an interupt triggered
+.That After the execution of ADD only then after the interupt will be executed.
+.When interupt in Execution stage that the others at fetch and decode are flushed out
+.Then the IRQ is executed like in pipeline architecture
+.IRQ first instruction fetched then processor parallely next cycle moved to decode and then executed.
+  paralely processor would fetch and decode other instructions
+.After all IRQ instructions executed then again .SUB is fetched and likewise pipeline continues
+.That when interupt is triggered there would the program counter would be decremented by 4 pointing towards previous instruction as in tyhe ftech then the instructions from where it is stoped.
