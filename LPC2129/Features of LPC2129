@@ -1,1 +1,38 @@
 Features of LPC2129
+--------------------
+1. ARM7TDMI-S basedhigh performance 32 bit RISC microcontroller with THUMB extensions
+
+  ARM7-family version
+  T   -Thumb Instructions
+  D   -hardware Debugger
+  M   -Multiplier and accummulator unit
+  I   -fast Interupts
+  S   -Synthesis     process of converting programming description into network of logic gates is called synthesis
+
+2. 256KB ownchip Flash ROM within sysytem programming(ISP) and IN Application Programming(IAP)
+   ISP: that for dumbing hex files there is no need to remove microcontroller from target board and do the firmware(microcontroller programing) 
+        so now aa days programs can be done on the target board itself withour removing microcontroller from target.
+
+   IAP: processor can write into flash memory 
+         if directly allowed processor can write programmer may delete he code causing problems
+
+3. 16KB RAM
+4. Vectored Interupts Controller(VIC) with configurable priorites and vector addresses
+5. Two UART(UART0 and UART1)
+6. I2C serial Interface
+7.2 SPI serial Interfcae(SPI0 and SPI1)
+8. Two timers(7 capture/compare channels(timer0 and timer1))
+9. PWM unit with upto 6PWM outputs
+
+5. Two UART
+    .for seriall communication its used
+    .one of the oldest protocol companies used for serial communication.
+    .one easy method for comunication
+    eg: biometric sensor project,RFID,GPS models
+    .Hardware connection is simple
+
+6. I2C Inter integrated circuit
+   I2c inbuild also called I2C peripheral we can communicate with external display,emory chip...
+    eg:pressure sensor
+
+
