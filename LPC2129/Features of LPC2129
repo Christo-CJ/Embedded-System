@@ -5,7 +5,7 @@ Features of LPC2129
   ARM7-family version 
   T   -Thumb Instructions  
   D   -hardware Debugger 
-  M   -Multiplier and accummulator unit     
+  M   -Multiplier and accummulator unit       
   I   -fast Interupts
   S   -Synthesis     process of converting programming description into network of logic gates is called synthesis
 
