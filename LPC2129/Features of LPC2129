@@ -34,5 +34,81 @@ Features of LPC2129
 6. I2C Inter integrated circuit
    I2c inbuild also called I2C peripheral we can communicate with external display,emory chip...
     eg:pressure sensor
+    Both i2c and spi are both available in controller and we can use both compatible sensors.
+
+    SPI->only spi is there can use spi compatible sensors only
+    memory card is only spi compatible.
+
+7. 2 SPI serial peripheral interface
+
+8. It has 2 timers(timer0 and timer1)
+   main purpose of using interupt is delay generation.
+   eg: you can use interupt for 1 sec for processor.
+   while designing Os timer ,timer wll play major role time slice in OS is for every tick.OS will executes tasks parallely.
+
+   multitasking inbuilt.Time slice depends on timer.
+
+9. Pulse width modulation (PWM)
+    headlight display backlight in day time full intesity when turn on headlight interior will be dim.
+    when turn on light the led will be reduced intensity
+    to control speed of dc motor
+
+10. Four channel ADC
+    10 bit ADC with conversion time as low as 2.4Ms (microseconds)
+    eg:sensor input
+       if using sensor we need to use adc sensor gives input analog only Microcontroller only understands Digital.
+
+       sensor ->ADC ->MC
+    10 bit is output it is converted to 10bit digital output
+    10 bit is called resolution of ADC.
+
+11. Two interconncected CAN  interfaces with advanced acceptance filter.
+    Controller area network
+    Robert Bosch for automotive but now marine aviation robotics...
+    CAN is used in every car.
+    eg  airbag ,wipers,power machine ...
+
+12. Real time Clock
+    In our project if we need time and data RTC is used
+
+13. Watch Dog timer
+    role is reseting the contrller .Only this can reset the processor.
+    if robot send to space we cannot reset manually so watch dog timer so it can be done to reset
+
+14. General purpose IO pins
+    total 46 IO pins
+
+15. CPU clock upto 60MHz
+
+16. Onchip Crystal oscillator
+ 
+17. On chip PLL(phased lock loop)
+
+18. two low power modes idle and power down
+
+19. processor wakeup from power down mode via external interupt
 
 
+
+16. 12 mhz oscillator generates 12x10^6 oscillation .sec
+    the oscillator will convert every oscillation into clk pulses
+    also give 12Mhz to PLL then the 12x5=60MHz
+    60MHz is given to processor
+    60x10^6 clk pulses in 1 sec
+    cannot increase more than 60Mhz
+
+
+you cannot run linux/windows on LPC2129
+we can run mobiles controller now a days mobile
+
+RTOS
+----
+real time OS
+we cannot rin window/linuz because it need higher frequency need GHz but LPC2129 has only 60MHz
+Need also larger memory space,LPC2129 has low memory space 20+GB occupied by windows OS
+
+MPU memory protection unit has to be there to run OS on LPC2129 but it not there but above all RTOS doesnt care about anything RTOS can be runned on any controller
+4KB also it can be instaled
+
+GUI will not work on LPC2129
+cockpit also use RTOS siwtches all are RTOS GUI is not there.
