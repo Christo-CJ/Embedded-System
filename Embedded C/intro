@@ -5,7 +5,7 @@ what is embedded C?
 features of c language plus additional features of hardware communication.
 Embedded c is an extention to C programming language designed for microcontroller software development.
 
-Few feature of c language will not work in embedded c
+Few feature of c language will not work in embedded c 
 
 1.File handling will not work(NO OS is the reason)
 2.Command line argument will not work (no OS)
