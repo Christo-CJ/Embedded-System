@@ -1,0 +1,120 @@
+Features of c language can be used in Embedded C
+and also has some additional features.
+
+what is embedded C?
+features of c language plus additional features of hardware communication.
+Embedded c is an extention to C programming language designed for microcontroller software development.
+
+Few feature of c language will not work in embedded c
+
+1.File handling will not work(NO OS is the reason)
+2.Command line argument will not work (no OS)
+3.Avoid recursion (limited memory)
+4.Avoid DMA(limited memory)
+
+
+
+Embedded c                             v/s                             C language
+----------                                                             ----------
+1.Embedded C is designed for microcontroleer software development     1.It is designed for computer software development
+2.OS environment is not required to execuet emb-c code                2.OS environment is mandatory to execute C language
+3.Direct hardware communication is possible through registers         3.Direct hardware communication not possible
+4.We can use all microcontrollers SFRs in the embedded C              4.We cannot use any type of registers
+   note we cannot use GPR i emb c
+5.Cross compiler is used to compile embedded c code                   5.Native compiler is used to compile c language
+6.We can directly communicate with RAM address                        6.C language not allow to communicate with RAM
+
+
+
+How to define SFR in ARMCC compiler
+syntax: #define REG_NAME((volatile unsigned int*)*REG_ADDR)
+
+LPC2129
+#define T0PR((*(volatile unsigned int*)0xE00400C))
+
+
+
+AMBA
+----
+Advanced Microcontroller Bus Architecture
+AMBA is used to connect peripherals
+AMBA bus is used to interface all the on-chip peripherals of ARM controller to a ARM procesor
+
+There are two types of AMBA bus used inLPC2129
+1.Advanced High performance Bus(AHB)
+2.Advanced Peripgeral Bus(APB)
+
+
+Advanced High Performance Bus
+------------------------------
+It is high bandwidth bus used to connect high speed peripherals of ARM SOC to ARM processor
+eg: VIC Vectored Interupt controller
+
+
+Advanced Peripheral Bus
+-----------------------
+It is low bandwidth bus used to connect slow speed peripheral of ARM SoC to ARM processor
+eg:GPIO,UART,ADC,Timer<I2C,SPI...
+
+low bandwidth bus used to connect slow speed peripheral slot 
+ARMSoC to ARM processor
+eg:GPIO,UART,SPI,I2C..
+
+PCLK depends upon VPB divideer(VLSI peripheral bus divider)
+VPBDiv can control PCLK.
+
+
+VPBDiv register configuration
+-----------------------------
+if VPBDiv ==0               //default value is 0
+PCLK=CCLK/4=60/4=15MHz (default)
+
+Every APB peripheral will get 15 MHz for use
+Individual peripheral baud rate need to be programmed .The peripheral and external device nust have same baud rate.
+if we change the VPBDiv Reg value;PCLK value also change
+By default value of VPBDiv register in LPC2129 is 0
+ie,every peripheral will get 15MHz for internal use
+  every peripheral which are connected on APB Bus is 15MHz
+
+UART is a peripheral which wil communicate  and connect with bluetooth modem
+freq of bluetooth modem=9600Hz
+freq os UART peripheral =15MHz
+15MHz/2=9600Hz
+
+ we need to set the same freq of bluetooth modem and uart then only we can exhchange data b/w uart and bluetooth modem.
+ local bus is not AMBA bus 
+ AHB and APB for AMBA bus
+
+
+ VPBDiv value                          PCLK
+ ------------                          ----
+ 0                              pclk=cclk/4=60/4=15MHz
+ 1                                          60/1=60MHz
+ 2                                          60/2=30MHz
+ 3                                      reserved
+ 4                                          60/4=15MHz
+ 5                                          60/1=60MHz
+ 6                                          60/2=30MHz
+ 7                                      reserved
+ 8                                          60/4=15MHz
+
+ When we change the controller ;CCLK and PCLK will change 
+ if the cclk changed;Then pclk will automatically change
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
