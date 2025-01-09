@@ -8,7 +8,7 @@ Embedded c is an extention to C programming language designed for microcontrolle
 Few feature of c language will not work in embedded c 
 
 1.File handling will not work(NO OS is the reason)
-2.Command line argument will not work (no OS)
+2.Command line argument will not work (no OS) 
 3.Avoid recursion (limited memory)
 4.Avoid DMA(limited memory)
  
