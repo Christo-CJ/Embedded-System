@@ -6,7 +6,7 @@ If processor is 32 bit ALU processing capacity is 32 bit
 8 bit can do 32 bit but takes 4 cycle
 
 if processor is 32 bit means ALU processing capacity is 32 bit  
-if processor is 32 bit size of register is also 32 bit
+if processor is 32 bit size of register is also 32 bit  
 
 
 memory split ration since using Von-Neumann arch is 3:1
