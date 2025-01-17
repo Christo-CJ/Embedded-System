@@ -1,6 +1,6 @@
 the registers inside the ARM are all 32 bit registers. 
 ARM works on a 3.3 v and working frequency is 60 MHz
-If processor is 32 bit ALU processing capacity is 32 bit
+If processor is 32 bit ALU processing capacity is 32 bit  
 
 8 bit processor can do 16 bit operation but it will take 2 cycles 
 8 bit can do 32 bit but takes 4 cycle
