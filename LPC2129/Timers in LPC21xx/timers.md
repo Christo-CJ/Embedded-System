@@ -6,7 +6,7 @@
  ## what is delay?
  Assume we have 4 line of code the job of processor is to execute these 4 lines of code
  so the 4 lines are like this   
- 1. _____  
+ 1. _____ . 
  2. _____ 1sec
  3. _____ 500 ms  
  4. _____ 1 sec
