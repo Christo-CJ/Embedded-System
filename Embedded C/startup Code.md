@@ -1,4 +1,4 @@
-## Start UP COde
+## Start UP Code
 It is overhead code in the hex file.  
 It is added in the hex file when we write embedded c or embedded cpp code.  
 startup code is added by cross compiler.   
