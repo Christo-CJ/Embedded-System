@@ -10,7 +10,7 @@ After reset -> startup code -> main function -> other user defined function
 
 ## Startup code role
 It initializes the microcontroller syatem before executing the main function  
-Startup code initializes  
+Startup code initializes   
 - memory
 - clock
 - stack
