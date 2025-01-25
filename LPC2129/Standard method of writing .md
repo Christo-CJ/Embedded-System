@@ -15,4 +15,4 @@ what ever execute in user space is `application.`
 what ever execute in kernel space is `driver.`    
 Application and driver combine mbedded c.
 mixing c language and registers when changing processor only driver layer need to be changed.  
-
+ 
