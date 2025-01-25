@@ -3,7 +3,7 @@
 Application shouldnot communicate directly with the hardware(microcontroller)  
 Application means hardware independent code.  
 Driver is a hardware dependent code.   
-C is a portable language can be used without any hardware but embedded c is partially portable.  
+C is a portable language can be used without any hardware but embedded c is partially portable.    
 That the register assigned to use ARM written program there would be problem that it doesnot work for other controller that the register names should be charged.  
 
 Agenda:Application must be hardware independent,doesnot have register in that code.  
