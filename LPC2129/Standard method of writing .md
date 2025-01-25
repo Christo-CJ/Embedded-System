@@ -1,5 +1,5 @@
 ## Standard method of writing embedded c code  
-
+ 
 Application shouldnot communicate directly with the hardware(microcontroller)   
 Application means hardware independent code.     
 Driver is a hardware dependent code.   
