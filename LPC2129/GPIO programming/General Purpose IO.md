@@ -107,3 +107,14 @@ IOSET0=0x1;
 IOCLR0=0x1;
 }
 ```
+
+## GPIO Port Pin Value Register (IOPIN)
+
+- IOPIN0/I0OPIN (port 0)
+- IOPIN1/IO1PIN (port 1)
+
+After reset reset value (not available)  
+It will give live status of IOPIN.  
+ bit number = pin number.  
+
+ 
