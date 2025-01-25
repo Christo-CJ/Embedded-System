@@ -1,7 +1,7 @@
 ## Standard method of writing embedded c code  
  
 Application shouldnot communicate directly with the hardware(microcontroller)   
-Application means hardware independent code.     
+Application means hardware independent code.      
 Driver is a hardware dependent code.   
 C is a portable language can be used without any hardware but embedded c is partially portable.    
 That the register assigned to use ARM written program there would be problem that it doesnot work for other controller that the register names should be charged.  
