@@ -7,7 +7,7 @@ What is protocol?
 Set of standards.  
 
 What is UART?  
-The UART is on-chip peripheral of microcontroller.UART is serial in parallel out and parallel in serial out peripheral.  
+The UART is on-chip peripheral of microcontroller.UART is serial in parallel out and parallel in serial out peripheral.   
 
 *Note*:While transmitting data UART act as parallel in serial out while receiving data uart act as serial in parallel out peripheral.   
 
