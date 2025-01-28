@@ -1,6 +1,6 @@
 # Universal Asynchronous Receiver and Transmitter  
 
-This is a very old protocol.  
+This is a very old protocol.   
 Exchange data with computer and external UART devices. 
 
 What is protocol?   
