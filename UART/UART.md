@@ -33,7 +33,7 @@ UART is designed for Asynchronous Serial Communication.
 
 Synchronous Serial Communication:  
 In Synchronous serial communication common clock line is used between transmitter and receiver.  
-In master and slave only master can generate clock pulses thats why direction of clockline is towards slave.  
+In master and slave only master can generate clock pulses thats why direction of clockline is towards slave.   
 Clock line is used for synchronisation.  
 Data line is used for exchange data.  
 Using data line master can write into slave and read from slave.   
