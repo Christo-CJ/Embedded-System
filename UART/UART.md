@@ -36,7 +36,7 @@ In Synchronous serial communication common clock line is used between transmitte
 In master and slave only master can generate clock pulses thats why direction of clockline is towards slave.  
 Clock line is used for synchronisation.  
 Data line is used for exchange data.  
-Using data line master can write into slave and read from slave.  
+Using data line master can write into slave and read from slave.   
 For every bit new clock pulse is required for one clock pulse detected master has given one data bit.  
 Multiple datas cannot be send using one clock pulses.  
 Master will not generate clock pulse slave will not read dataline.  
