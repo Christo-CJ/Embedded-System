@@ -5,7 +5,7 @@ Exchange data with computer and external UART devices.
  
 What is protocol?   
 Set of standards.   
-
+ 
 What is UART?  
 The UART is on-chip peripheral of microcontroller.UART is serial in parallel out and parallel in serial out peripheral.   
 
