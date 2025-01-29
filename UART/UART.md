@@ -16,7 +16,7 @@ UART is designed for Asynchronous Serial Communication.
 
 `Serial Communication` is a process of sending one bit at a time    
 `parallel communication` is a process of sending multiple bits ata time .parallel increases hardware size and increases cost.Now a days all companies are moving towards serial communication.     
-
+ 
 `Serial communication light weight communication` 
 
 ## UART Applications/Projects
