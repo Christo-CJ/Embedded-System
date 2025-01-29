@@ -45,4 +45,4 @@ For every clock pulse one data read from dataline.
 `If master has to send 8 bit master has to generate 8 clock pulse`  
 Maximum speed slave comes with predefined or default speed.  
 If slave speed is 400kbps then master speed must be set at max speed <=400kbps.But not more than 400kbps and not less than 1kbps.  
-
+ 
