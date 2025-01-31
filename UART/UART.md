@@ -3,7 +3,7 @@
 This is a very old protocol.   
 Exchange data with computer and external UART devices. 
   
-What is protocol?   
+What is protocol?    
 Set of standards.   
  
 What is UART?  
