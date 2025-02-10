@@ -4,7 +4,7 @@ Uart is devided into 3 sections transmitting section , receiving section , Baudr
 In case UART is SFR Tx buffer size is 1 byte it is a part of protocol.  
 This standard will never change.  
 This is place we put transmitter data.
-if we want to send we have data into Tx buffer  As soon as write into Tx buffer will transmitting serially .  
+if we want to send we have data into Tx buffer  As soon as write into Tx buffer will transmitting serially .   
 As soon as write into it,transmitting section will immediately serially parallel input and output is serial.   
 We have to put 1 byte to transfer  automatically data get transmitted bit by bit.  
 As soon as we weite dta into tx buff then flag becomes '0'  
