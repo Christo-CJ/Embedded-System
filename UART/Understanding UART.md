@@ -1,5 +1,5 @@
 Uart is devided into 3 sections transmitting section , receiving section , Baudrate section.   
-
+ 
 ## Tx Buffer:
 In case UART is SFR Tx buffer size is 1 byte it is a part of protocol.  
 This standard will never change.  
