@@ -31,7 +31,7 @@ UART is designed for Asynchronous Serial Communication.
 - Synchronous serial communication
 - Asynchronous serial communication
 
-Synchronous Serial Communication:  
+- **Synchronous Serial Communication:**   
 In Synchronous serial communication common clock line is used between transmitter and receiver.  
 In master and slave only master can generate clock pulses thats why direction of clockline is towards slave.   
 Clock line is used for synchronisation.  
@@ -46,3 +46,15 @@ For every clock pulse one data read from dataline.
 Maximum speed slave comes with predefined or default speed.  
 If slave speed is 400kbps then master speed must be set at max speed <=400kbps.But not more than 400kbps and not less than 1kbps.  
  
+- **Asynchronous serial Communication:**
+A common clock line is not used between common receiver and transmitter.
+Speed is major parameter used in synchronization.
+Transmitter speed and receiver speed must be same in asynchronous serial communication.
+Assume asynchronous communication is speed 1Mbps so receive and transmit 1 Mb per second.
+Master has to transmit 1 bit in 1 Ms (microsecond)
+Device must know when master has started.
+Start bit gives to slave that information thats master has started.then after each Ms slave will read dataline.  After sending master will give stop bit these are not data bit this are just information bit.
+`Data information = Data frame`
+Speed is change time per bit will also change.
+Start bitt,stop bit,sped all are used for synchronization.
+Master write each bit in a 1Ms gap each Ms each bit written in dataline from each Ms slave will read the dataline so that speed must be same.
