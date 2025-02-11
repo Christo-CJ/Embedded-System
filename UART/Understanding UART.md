@@ -9,5 +9,5 @@ As soon as write into it,transmitting section will immediately serially parallel
 We have to put 1 byte to transfer  automatically data get transmitted bit by bit.  
 As soon as we weite dta into tx buff then flag becomes '0'  
 then automaticallytransmitting section creates dtaa frame  
-When tx section transmitting the data frame that time flag will be '0'
+When tx section transmitting the data frame that time flag will be '0' 
 as soon as stop bit is transmitted the flag became 1.  
